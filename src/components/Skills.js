@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Code, Database, Brain, Cloud, Server, Wrench } from 'lucide-react';
+import { Code, Database, Brain, Server, Wrench } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Card } from './ui/card';
+import { Button } from './ui/button';
 
 const Skills = () => {
   const sectionRef = useRef(null);
@@ -32,32 +34,32 @@ const Skills = () => {
     {
       icon: Code,
       title: 'Languages',
-      skills: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C', 'SQL', 'HTML5', 'CSS3']
+      skills: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C', 'C#', 'SQL']
     },
     {
-      icon: Server,
-      title: 'Frontend',
-      skills: ['React', 'Next.js', 'D3.js', 'Vanilla JS', 'Bootstrap', 'Framer Motion', 'Responsive Design']
+      icon: Code,
+      title: 'Frontend & Backend',
+      skills: ['React', 'Next.js', 'HTML', 'CSS', 'Bootstrap', 'Node.js', 'Express.js', 'REST APIs', 'FastAPI', 'WebSockets']
     },
     {
       icon: Database,
-      title: 'Backend & Databases',
-      skills: ['Node.js', 'Express.js', 'FastAPI', 'REST APIs', 'JWT Authentication', 'PostgreSQL', 'Supabase', 'Stripe', 'SQLite']
+      title: 'Databases',
+      skills: ['PostgreSQL', 'SQLite', 'Supabase']
     },
     {
       icon: Brain,
-      title: 'Machine Learning',
-      skills: ['TensorFlow', 'Scikit-learn', 'PyTorch', 'NumPy', 'Pandas']
-    },
-    {
-      icon: Cloud,
-      title: 'DevOps & Cloud',
-      skills: ['Vercel', 'Railway', 'Cloudinary', 'Multer', 'Git', 'GitHub', 'Linux/Unix']
+      title: 'AI / ML',
+      skills: ['PyTorch', 'Q-Learning', 'Sarsa', 'DQN', 'Minimax', 'RAG', 'Agentic AI concepts']
     },
     {
       icon: Wrench,
       title: 'Tools & Platforms',
-      skills: ['UiPath Studio', 'UiPath Cloud', 'Power Automate', 'Power BI', 'Jupyter Notebooks', 'LaTeX']
+      skills: ['Git', 'GitHub', 'Linux', 'UiPath']
+    },
+    {
+      icon: Wrench,
+      title: 'Software Engineering & CS',
+      skills: ['Data Structures and Algorithms', 'Object-Oriented Programming', 'DBMS', 'SDLC', 'System Design', 'Cloud Computing', 'Computer Networks', 'Operating Systems', 'RPA']
     }
   ];
 
@@ -105,6 +107,15 @@ const Skills = () => {
               );
             })}
           </div>
+          <Card className="mt-8 p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-2 dark:bg-gray-800/50">
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white">Data Structures and Algorithms Practice</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">View my DSA practice repository on GitHub.</p>
+            </div>
+            <Button variant="outline" onClick={() => window.open('https://github.com/Jeffrey-Hamlin-V/DSA', '_blank', 'noopener,noreferrer')}>
+              <ExternalLink className="h-4 w-4 mr-2" />View repository
+            </Button>
+          </Card>
         </div>
       </div>
     </section>
